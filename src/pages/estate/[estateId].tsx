@@ -34,7 +34,7 @@ const EstateDetail = ({ message, response, status }: ResponseData<Estate>) => {
                     <meta property="twitter:card" content="summary_large_image" />
                     <meta property="twitter:url" content="https://nextjs-test-7mrq72fej-koko-linoo.vercel.app/about" />
                     <meta property="twitter:title" content={response?.township?.name} />
-                    <meta property="twitter:description" content={response?.price} />
+                    <meta property="twitter:description" content={`MMK ${response?.price ?? 0}`} />
                     {response?.files?.length ?
                         <meta
                             property="twitter:image"
