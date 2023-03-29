@@ -1,0 +1,1 @@
+export const host: string = "https://staging-api.bplusproperty.com"
