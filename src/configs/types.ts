@@ -48,7 +48,7 @@ export interface Estate {
     contactPhono?: string;
     contactPhonoOne?: string;
     contactPhonoTwo?: string;
-    files?: FileDB[] | [];
+    files: FileDB[] | [];
     address?: string;
     description?: string;
 }
