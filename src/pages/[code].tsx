@@ -26,9 +26,10 @@ const EstateDetail = ({ message, response, status }: ResponseData<Estate>) => {
                     imageUrl={response?.files[0]?.url}
                     description={response?.address}
                 />
+                <div className={styles.header}>
+                    B-Plus Property
+                </div>
                 <div className={styles.myRoot}>
-                    <div className={styles.left} />
-                    <div className={styles.right} />
                     <div className={styles.container}>
                         <div className={styles.image}>
                             <img
@@ -38,12 +39,15 @@ const EstateDetail = ({ message, response, status }: ResponseData<Estate>) => {
                             />
                         </div>
                         <div className={styles.detail}>
+                            <h2>Address : {response?.address + " " + response?.township?.name}</h2>
                             <br />
-                            <h1>{response?.township?.name}</h1>
+                            <h2>Price  &emsp; : MMK {response?.price}</h2>
                             <br />
-                            <h2>{response?.address}</h2>
+                            <h2>Phone  &nbsp;&nbsp;&nbsp;: {response?.contactPhono}</h2>
                             <br />
-                            <h2>MMK {response?.price}</h2>
+                            <h2>Phone 1 : {response?.contactPhonoOne ?? "-"}</h2>
+                            <br />
+                            <h2>Phone 2 : {response?.contactPhonoTwo ?? "-"}</h2>
                         </div>
                     </div>
                 </div>
