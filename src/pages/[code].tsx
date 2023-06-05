@@ -40,11 +40,6 @@ const EstateDetail = ({ message, response, status }: ResponseData<Estate>) => {
                                     <span>For : {response?.type} / {response?.propertyType?.name}</span>
                                     <span>$ {response?.price} Lakh</span>
                                     <span>{response?.width} x {response?.length} {response?.unit}</span>
-                                    <div className="flex flex-row items-center space-x-5">
-                                        <div className='border-t border-black w-10' />
-                                        <span> Address</span>
-                                        <div className='border-t border-black w-full' />
-                                    </div>
                                     <span>{response?.title}</span>
                                 </div>
                                 <div className='flex h-96 bg-slate-200 mt-auto bg-cover bg-center' style={{ backgroundImage: `url(${bgImage.src})` }} />
@@ -61,7 +56,11 @@ const EstateDetail = ({ message, response, status }: ResponseData<Estate>) => {
             </>
         )
     return (
-        <div>
+        <div className='w-screen h-screen items-center justify-center flex flex-col'>
+            <div className='text-xl font-bold italic'>Error</div>
+            <span className='text-sm italic'>
+                {message}
+            </span>
         </div>
     )
 }
