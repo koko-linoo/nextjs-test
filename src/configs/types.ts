@@ -4,10 +4,18 @@ export interface ResponseData<T> {
     status: number | null;
 }
 
+export interface State {
+    id?: number;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+}
+
 export interface Township {
     id?: number;
     name: string;
     stateId?: number;
+    state?: State;
     createdAt: string;
     updatedAt: string;
 }
@@ -33,10 +41,14 @@ export interface Estate {
     id?: number;
     length?: number;
     width?: number;
+    area?: number;
     code?: string;
     price?: string;
-    number?: string;
+    no?: string;
+    street1?: string;
+    street2?: string;
     building?: string;
+    floor?: string;
     agentName?: string;
     agentPhone?: string;
     ownerName?: string;
